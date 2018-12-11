@@ -45,8 +45,8 @@ struct pin {
 int parse_direction(const char *direction);
 int parse_edge(const char *edge);
 void pin_export(int pin);
-int pin_set_edge(int pin, int edge);
-int pin_set_direction(int pin, int direction);
+void pin_set_edge(int pin, int edge);
+void pin_set_direction(int pin, int direction);
 
 #endif // _GPIO_H
 

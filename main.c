@@ -191,8 +191,6 @@ run_script:
 }
 
 int main(int argc, char **argv) {
-	struct pollfd *fdlist;
-	int numfds = 0;
 	int ch;
 	int i;
 

@@ -2,6 +2,7 @@ SRCS = main.c gpio.c fileutil.c logging.c
 OBJS = $(SRCS:.c=.o)
 LIBS = -lrt
 INSTALL = install
+CFLAGS = -Wall
 
 prefix = /usr
 bindir = $(prefix)/bin

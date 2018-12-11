@@ -74,7 +74,6 @@ void pin_export(int pin) {
 
 	if (! is_dir(pin_path)) {
 		FILE *fp;
-		int tries = 0;
 
 		fp = fopen(export_path, "w");
 		if (!fp) {
@@ -91,13 +90,12 @@ void pin_export(int pin) {
 		sleep(1);
 	}
 
-end:
 	free(pin_path);
 	free(export_path);
 }
  
 // Set which signal edges to detect.
-int pin_set_edge(int pin, int edge) {
+void pin_set_edge(int pin, int edge) {
 	char *pin_path;
 	int pin_path_len;
 	FILE *fp;
@@ -141,7 +139,7 @@ int pin_set_edge(int pin, int edge) {
 }
 
 // Set pin as input or output.
-int pin_set_direction(int pin, int direction) {
+void pin_set_direction(int pin, int direction) {
 	char *pin_path;
 	int pin_path_len;
 	FILE *fp;
